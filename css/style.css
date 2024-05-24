@@ -378,3 +378,164 @@ img {
   background: #f4f4f6;
   color: #000;
 }
+
+/* Hamburger button */
+.hamburger-button{
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index:100;
+}
+
+.hamburger-button .hamburger-line{
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin:6px 0;
+}
+
+.mobile-menu{
+  position: fixed;
+  top:0;
+  right:-400px;
+  width: 250px;
+  height: 100%;
+  z-index: 50;
+  background: var(--card-bg--white);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+}
+
+.mobile-menu.active{
+  right:0;
+}
+
+.mobile-menu ul{
+  margin-top: 100px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li{
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a{
+  font-size: 20px;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+@media (max-width:768px) {
+  .text-xxl{
+    font-size: 2.5rem;
+  }
+
+  .navbar ul{
+    display: none;
+  }
+
+  .navbar .container{
+    padding:0 10px;
+  }
+
+  .navbar .hamburger-button{
+    display: block;
+  }
+
+  .hero .container{
+    background: url('/image/mobile-hero.png') no-repeat;
+    background-size: 400px 400px;
+    background-position: bottom;
+    height: 770px;
+  }
+
+  .hero .hero-content,
+  .hero .hero-text{
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero .hero-text{
+    padding: auto;
+    margin-bottom: 20px;
+  }
+
+  .hero .hero-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .hero-btns .btn{
+    margin-bottom: 20px;
+  }
+
+  .testimonial .testimonial-heading{
+    text-align: center;
+    width: 100%;
+  }
+
+  .testimonial .testimonial-grid,
+  .pricing .pricing-grid,
+  .footer .footer-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .footer .card{
+    margin-right: 0;
+  }
+
+  .footer .footer-grid > div{
+    text-align: center;
+  }
+
+  /* text */
+  .text-xl{
+    font-size: 1.9rem;
+  }
+
+  .text-l{
+    font-size: 1.5rem;
+  }
+
+  .text-md{
+    font-size: 1.1rem;
+  }
+
+  .footer .copyright{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width:500px) {
+  
+  .hero .hero-btns .btn{
+    display:block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text-xxl{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:400px) {
+  .hero .container{
+    background: url('/image/mobile-hero.png') no-repeat;
+    background-size: 90% 400px;
+    background-position: bottom;
+    height: 770px;
+  }
+}
