@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const faqContainer = document.querySelector(".faq-content");
+  const faqContainer = document.querySelector('.faq-content');
 
-  faqContainer.addEventListener("click", (e) => {
+  faqContainer.addEventListener('click', (e) => {
+    // alert(1);
     const groupHeader = e.target.closest(".faq-group-header");
 
     if (!groupHeader) return;
@@ -12,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // toggle
 
-    icon.classlist.toggle("fa-plus");
-    icon.classlist.toggle("fa-minus");
+    icon.classList.toggle("fa-plus");
+    icon.classList.toggle("fa-minus");
 
     // toggle the open of the body
 
-    groupBody.classlist.toggle("open");
+    groupBody.classList.toggle("open");
 
     // close other faq bodies
     const otherGroups = document.querySelectorAll(".faq-group");
@@ -37,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // mobile menu
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerButton = document.querySelectorAll(".hamburger-button");
-  const mobileMenu = document.querySelectorAll(".mobile-menu");
+  const hamburgerButton = document.querySelector(".hamburger-button");
+  const mobileMenu = document.querySelector(".mobile-menu");
   hamburgerButton.addEventListener("click", () => {
-    mobileMenu.classList.add(".active");
+    mobileMenu.classList.toggle("active");
   });
 });
